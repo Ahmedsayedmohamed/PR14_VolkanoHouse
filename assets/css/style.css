@@ -1,0 +1,687 @@
+/*===========================================================
+ Fonts
+ ============================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*===========================================================
+Global Styling & Roots
+ ============================================================*/
+:root {
+    --mainColor: #BC3838;
+    --mainDColor: #650000;
+    --polka-bg-image:
+        radial-gradient(rgb(19, 0, 87) 16%, transparent 19.2%),
+        radial-gradient(rgb(19, 0, 87) 16%, transparent 19.2%);
+    --polka-bg-position: 0px 0px, 12px 12px;
+    --polka-bg-size: 24px 24px;
+    --polka-bg-color: rgb(255, 255, 255);
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.mainColor {
+    color: var(--mainColor);
+}
+
+.bgMainColor {
+    background-color: var(--mainColor);
+}
+
+.mainDColor {
+    color: var(--mainDColor);
+}
+
+.bgMainDColor {
+    background-color: var(--mainDColor);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.title {
+    color: var(--mainDColor);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.container p.text-start {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.txtWhite {
+    color: #fff;
+}
+
+.pagesTitle {
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    margin-bottom: 100px;
+    font-weight: 500;
+    padding-block: 50px;
+    background: linear-gradient(to bottom, rgba(12, 2, 145, 0.5), rgba(134, 10, 10, 0.466)), url('../Images/firePage.png') center/cover no-repeat;
+}
+
+.desciptionٍSer {
+    margin-block: 80px;
+}
+
+.desciptionٍSer .secTitle {
+    display: inline-block;
+    font-size: 20px;
+    color: #15098a;
+    margin-block: 30px 10px;
+    font-weight: 700;
+    width: auto;
+    font-family: "Montserrat", sans-serif;
+    background-image:
+        radial-gradient(rgb(19, 0, 87) 10%, transparent 13.2%),
+        radial-gradient(rgb(19, 0, 87) 10%, transparent 13.2%);
+    background-position: 0px 0px, 4px 4px;
+    background-size: 8px 8px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.desciptionٍSer ul {
+    list-style-type: circle;
+}
+
+.w-95 {
+    width: 95% !important;
+}
+
+/*===========================================================
+Loading
+ ============================================================*/
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    animation: zoom 1s linear infinite;
+}
+
+.centerLoading {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes zoom {
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/*===========================================================
+Navbar
+ ============================================================*/
+nav .navbar-nav a {
+    font-family: "Montserrat", sans-serif;
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all .5s;
+    font-size: 17px !important;
+}
+
+
+nav .dropdown a {
+    border: 0;
+    padding: 8px;
+}
+
+nav .dropdown ul a {
+    border: 0;
+    padding-inline: 18px;
+}
+
+
+nav .dropdown a {
+    font-size: 17px !important;
+}
+
+nav .navbar-nav a:hover {
+    color: var(--mainColor) !important;
+}
+
+nav select:focus-visible {
+    outline: none !important;
+}
+
+nav .langButton select{font-weight: 600;}
+
+nav .langButton select:hover{
+    color: var(--mainDColor) !important;
+}
+
+nav .dropdown-toggle::after{
+    margin-inline: 8px !important;
+}
+/*===========================================================
+Slide show
+ ============================================================*/
+.owlCarsoul .slider img {
+    height: 700px;
+}
+
+.clientsSlideshow .ClientSliderr img {
+    height: 100px;
+}
+
+/*===========================================================
+top Button section
+ ============================================================*/
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: var(--mainDColor);
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding-inline: 11px;
+    padding-block: 8px;
+    /* Some padding */
+    border-radius: 50%;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}
+
+/*===========================================================
+Footer section
+ ============================================================*/
+footer {
+    color: #fff;
+}
+
+footer .phoneSection a:hover i {
+    color: var(--mainColor);
+    transition: all .5s;
+}
+
+footer .phoneSection a .tel:hover {
+    transition: all .5s;
+}
+
+footer .phoneSection a .tel:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+footer .phoneSection .noneDis {
+    visibility: hidden;
+}
+
+
+footer .social {
+    background-color: var(--mainDColor);
+    border: 1px solid var(--mainDColor);
+    padding: 10px;
+    transition: all .5s;
+}
+
+footer .social:hover {
+    background-color: transparent;
+    transform: scale(1.1);
+    margin-inline: 5px;
+}
+
+
+/*===========================================================
+Media Query
+ ============================================================*/
+@media screen and (max-width: 576px) {
+    .owlCarsoul .slider img {
+        height: 200px;
+    }
+
+    .clientsSlideshow .ClientSliderr img {
+        height: 60px;
+    }
+
+    nav select:focus-visible {
+        outline: none !important;
+    }
+
+    nav select {
+        outline: none !important;
+        border: none;
+    }
+}
+
+
+/* ########### Home Page ###############  */
+
+
+/*===========================================================
+about us section
+ ============================================================*/
+
+#about .container {
+    background: linear-gradient(to bottom, rgba(212, 205, 205, 0.623), rgba(206, 199, 199, 0.555)), url('../Images/about.jpg') center/contain no-repeat;
+}
+
+
+.button {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 100px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #1163ff;
+    --tooltip-color: #2e2929;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+}
+
+.button::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: var(--tooltip-color);
+    font-size: 0.9rem;
+    color: #fafafa;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: var(--tooltip-color);
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,
+.button::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-wrapper,
+.text,
+.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+}
+
+.text {
+    top: 0
+}
+
+.text,
+.icon {
+    transition: top 0.5s;
+}
+
+.icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.button:hover {
+    background: #6c18ff;
+}
+
+.button:hover .text {
+    top: -100%;
+}
+
+.button:hover .icon {
+    top: 0;
+}
+
+.button:hover:before,
+.button:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.button:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+/*===========================================================
+Why us section
+ ============================================================*/
+#why .container {
+    background: linear-gradient(to bottom, rgba(116, 10, 10, 0.808), rgba(107, 9, 9, 0.815)), url('../Images/bgWhy.jpg') center/cover no-repeat;
+}
+
+/*===========================================================
+Our Goals section
+ ============================================================*/
+#goals .container {
+    background: linear-gradient(to bottom, rgba(214, 209, 209, 0.678), rgba(214, 207, 207, 0.801)), url('../Images/goals.jpg') center/cover no-repeat;
+}
+
+
+/*===========================================================
+Services section
+ ============================================================*/
+
+#goals .content {
+    background-color: #ecebebbe;
+    padding: 30px 15px 10px;
+    border-radius: 20px;
+    transition: all .5s;
+}
+
+#goals .content:hover {
+    transform: scale(1.1);
+}
+
+
+/*===========================================================
+Services section
+ ============================================================*/
+#services .layer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000088;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+#services a img {
+    transition: all .9s;
+}
+
+#services a .layer {
+    transition: all .9s;
+}
+
+#services a:hover .layer {
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+#services a:hover img {
+    transform: scale(1.2);
+}
+
+/*===========================================================
+ProjectNO section
+ ============================================================*/
+#projectNO .projectCounter {
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+
+/* ########### Fire system Page ###############  */
+
+
+/*===========================================================
+fire system section
+ ============================================================*/
+
+#fp .pagesTitle {
+    background: linear-gradient(to bottom, rgba(12, 2, 145, 0.5), rgba(134, 10, 10, 0.466)), url('../Images/firePage.png') center/cover no-repeat;
+}
+
+
+#fp .fpContent .layer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10%;
+    left: 16%;
+    height: 80%;
+    width: 68%;
+    background-color: #000000ab;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transition: all .7s;
+}
+
+#fp .fpContent .layer:hover {
+    transform: scale(1.1);
+}
+
+#fp .fpContent img {
+    transform: scale(1.3);
+    transition: all .7s;
+}
+
+
+#fp .fpContent:hover img {
+    transform: scale(1);
+}
+
+
+/* ########### HVAC Page ###############  */
+
+
+/*===========================================================
+HVAC  section
+ ============================================================*/
+
+#HVAC .pagesTitle {
+    background: linear-gradient(to bottom, rgba(12, 2, 145, 0.5), rgba(134, 10, 10, 0.466)), url('../Images/HVACPage.png') center/cover no-repeat;
+}
+
+
+#HVAC .HVACContent img {
+    transition: all .8s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#HVAC .HVACContent img:hover {
+    transform: scale(1);
+}
+
+/* ########### MEP Page ###############  */
+
+/*===========================================================
+MEP  section
+ ============================================================*/
+
+#MEP .pagesTitle {
+    background: linear-gradient(to bottom, rgba(12, 2, 145, 0.5), rgba(134, 10, 10, 0.466)), url('../Images/MEP.png') center/cover no-repeat;
+}
+
+
+#MEP .MEPContent img {
+    transition: all .8s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#MEP .MEPContent img:hover {
+    transform: scale(1);
+}
+
+
+/* ########### Maintenance Page ###############  */
+
+/*===========================================================
+Maintenance  section
+ ============================================================*/
+
+#Maintenance .pagesTitle {
+    background: linear-gradient(to bottom, rgba(12, 2, 145, 0.5), rgba(134, 10, 10, 0.466)), url('../Images/MEP.png') center/cover no-repeat;
+}
+
+#Maintenance .MaintenanceContent img {
+    transition: all .8s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#Maintenance .MaintenanceContent img:hover {
+    transform: scale(1);
+}
+
+/* ########### Duct Page ###############  */
+
+/*===========================================================
+Duct  section
+ ============================================================*/
+
+#Duct .pagesTitle {
+    background: linear-gradient(to bottom, rgba(12, 2, 145, 0.5), rgba(134, 10, 10, 0.466)), url('../Images/Duct.png') center/cover no-repeat;
+}
+
+#Duct .DuctContent img {
+    transition: all .8s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#Duct .DuctContent img:hover {
+    transform: scale(1);
+}
+
+#Duct table tr th {
+    padding: 20px;
+}
+
+
+#Duct table tr td h6 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Duct table tr td ul {
+    transform: translateY(25%);
+}
+
+/* ########### Material Page ###############  */
+
+/*===========================================================
+Material  section
+ ============================================================*/
+#gallary .sec1 .layer {
+    position: absolute;
+    text-align: left !important;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000ab;
+    text-align: center;
+    color: #fff;
+    transition: all .7s;
+    padding: 60px 30px;
+    border-radius: 15px;
+}
+
+#gallary .sec2 .card img {
+    transition: all .7s;
+}
+
+#gallary .sec2 .card:hover img {
+    transform: scale(1.1);
+}
+
+#gallary .sec3 .card {
+    transition: all .7s;
+}
+
+#gallary .sec3 .card:hover {
+    transform: scale(1.1);
+}
